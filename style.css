@@ -1,22 +1,37 @@
+:root {
+    --blurBackground: rgba( 10, 10, 10, 0.7 );
+    --blurText: rgb( 220, 220, 220 );
+    --navHover: rgb( 200, 200, 200 );
+}
 * {
     margin: 0;
     padding: 0;
+    /*outline: 1px red solid;*/
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
-    background-image: url(assets/img/beach.jpg);
-    height: 200vh;
+    background-image: url(assets/img/darkBg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* Add a black background color to the top navigation */
 .topnav {
+    z-index: 99;
+    margin-top: 1vw;
     margin-left: 10vw;
     position: fixed;
     width: 80vw;
-    background: rgba( 255, 255, 255, 0.3 );
+    background: var(--blurBackground);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*border: 1px solid rgba( 255, 255, 255, 0.18 );*/
     overflow: hidden;
   }
   
@@ -24,28 +39,172 @@ body {
   .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: var(--blurText);
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 26px;
     text-decoration: none;
     font-size: 17px;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: var(--navHover);
+    border-radius: 10px;
     color: black;
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
-    background-color: #04AA6D;
+    /*background-color: rgba( 10, 10, 10, 0.4 );*/
+    background: rgba( 0, 0, 0, 0.5 );
+    border-radius: 10px;
     color: white;
   }
   
   /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
+  }
+
+  .welcome {
+    padding-top: 10vw;
+    width: 100%;
+    height: calc(100vh - 10vw);
+  }
+  .welcomeBox {
+    color: var(--blurText);
+    margin-left: 10vw;
+    background: var(--blurBackground);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    width: 80vw;
+    height: 60vh;
+  }
+  .welcomeLeft {
+    height: 100%;
+    width: 30%;
+    float: left;
+  }
+  .welcomeLeft > img {
+    margin-top: 15%;
+    margin-left: 15%;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 2px solid var(--blurText);
+  }
+  .welcomeRightTop {
+    margin-top: 3%;
+    height: 30%;
+    width: 65%;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .welcomeRightTop > h1 {
+    margin-top: 10%;
+  }
+  .welcomeRightBottom {
+    height: 50%;
+    width: 60%;
+    margin-right: 5%;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .welcomeRightBottom > p {
+    margin-top: 1%;
+  }
+
+  .portfolio {
+    width: 100%;
+    background: transparent;
+  }
+  .portfolioBox {
+    margin-left: 10vw;
+    padding-bottom: 5vh;
+    margin-bottom: 10vh;
+    background: var(--blurBackground);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    width: 80vw;
+  }
+  .portfolioBox > h1 {
+    color: var(--blurText);
+    padding: 3vw;
+    font-size: 3vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .grid {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". .";
+    text-align: center;
+  }
+  .website img {
+    height: 40vh;
+    border-radius: 15px;
+  }
+  .website a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blurText);
+    text-decoration: none;
+  }
+  .website h3 {
+    padding: 1vw 0vw 2vw 0vw;
+  }
+  footer {
+    text-align: center;
+    margin-top: 1vw;
+    margin: auto;
+    width: 80vw;
+    height: 15vh;
+    color: var(--blurText);
+    background: var(--blurBackground);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+  }
+  footer p {
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+  }
+  footer a {
+    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: var(--blurText);
+    text-decoration: none;
+  }
+  footer h2 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .toggleButton {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: var(--blurBackground);
+    color: var(--blurText);
+    position: fixed;
+    bottom: 1vw;
+    right: 0.5vw;
+    padding: 1vw;
+    border-radius: 10px;
+  }
+  .toggleButton:hover {
+    background-color: var(--navHover);
+    color: black;
   }
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -55,10 +214,17 @@ body {
       float: right;
       display: block;
     }
+    .welcome {
+        padding-top: 15vw;
+    }
   }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
+    .topnav {
+        margin-left: 5vw;
+        width: 90vw;
+    }
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
