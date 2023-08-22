@@ -106,9 +106,45 @@ body {
     height: 50%;
     width: 60%;
     float: left;
-    font-size: 1.5vw;
+    font-size: 1.23vw;
     font-family: Arial, Helvetica, sans-serif;
   }
+  /* .about {
+    scroll-margin-top: 9vw;
+    width: 100%;
+  }
+  .aboutBox {
+    color: var(--blurText);
+    background: var(--blurBackground);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 5vh;
+    margin-bottom: 10vh;
+  }
+  .aboutBox > h1 {
+    color: var(--blurText);
+    padding: 3vw;
+    font-size: 3vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". .";
+    text-align: center;
+  }
+  .skillGrid {
+    padding: 3vw;
+  } */
   .portfolio {
     scroll-margin-top: 9vw;
     width: 100%;
@@ -156,6 +192,38 @@ body {
   .website h3 {
     padding: 1vw 0vw 2vw 0vw;
     font-size: 2vw;
+  }
+  .contact {
+    scroll-margin-top: 9vw;
+    width: 100%;
+  }
+  .contactBox {
+    color: var(--blurText);
+    background: var(--blurBackground);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 5vh;
+    margin-bottom: 10vh;
+  }
+  .contactBox > h1 {
+    color: var(--blurText);
+    padding: 3vw;
+    font-size: 3vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .contactBox > p > span {
+    color: var(--blurText);
+  }
+  .contactBox > p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blurText);
+    padding: 1vw;
+    font-size: 1.5vw;
+    text-align: center;
   }
   footer {
     text-align: center;
@@ -303,6 +371,12 @@ body {
       }
       .website h3 {
         font-size: 3.5vw;
+      }
+      .contactBox > h1 {
+        font-size: 6vw;
+      }
+      .contactBox > p {
+        font-size: 3vw;
       }
       footer > div > p > a {
         font-size: 5vw;
