@@ -12,6 +12,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    padding: 0 10%;
     background-image: url(assets/img/darkBg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,9 +24,8 @@ body {
 .topnav {
     z-index: 99;
     margin-top: 1vw;
-    margin-left: 10vw;
     position: fixed;
-    width: 80vw;
+    width: 80%;
     background: var(--blurBackground);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
@@ -42,9 +42,9 @@ body {
     color: var(--blurText);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 14px 26px;
+    padding: 1.25vw 2vw;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.5vw;
   }
   
   /* Change the color of links on hover */
@@ -69,60 +69,52 @@ body {
 
   .welcome {
     padding-top: 10vw;
+    padding-bottom: 10vw;
     width: 100%;
-    height: calc(100vh - 10vw);
   }
   .welcomeBox {
     color: var(--blurText);
-    margin-left: 10vw;
     background: var(--blurBackground);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
-    width: 80vw;
-    height: 60vh;
+    display: block;
+    padding: 5%;
+    overflow: auto;
   }
   .welcomeLeft {
-    height: 100%;
-    width: 30%;
+    display: block;
+    overflow: auto;
     float: left;
   }
   .welcomeLeft > img {
-    margin-top: 15%;
-    margin-left: 15%;
     width: 20vw;
-    height: 20vw;
+    height: 100%;
     border-radius: 50%;
     border: 2px solid var(--blurText);
   }
   .welcomeRightTop {
-    margin-top: 3%;
+    padding: 0.75vw 1vw 0 3vw;
     height: 30%;
-    width: 65%;
-    float: right;
+    float: left;
+    font-size: 2vw;
     font-family: Arial, Helvetica, sans-serif;
-  }
-  .welcomeRightTop > h1 {
-    margin-top: 10%;
   }
   .welcomeRightBottom {
+    padding: 1vw 1vw 0 3vw;
     height: 50%;
     width: 60%;
-    margin-right: 5%;
-    float: right;
+    float: left;
+    font-size: 1.5vw;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .welcomeRightBottom > p {
-    margin-top: 1%;
-  }
-
   .portfolio {
+    scroll-margin-top: 9vw;
     width: 100%;
     background: transparent;
   }
   .portfolioBox {
-    margin-left: 10vw;
     padding-bottom: 5vh;
     margin-bottom: 10vh;
     background: var(--blurBackground);
@@ -130,7 +122,7 @@ body {
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
-    width: 80vw;
+    width: 100%;
   }
   .portfolioBox > h1 {
     color: var(--blurText);
@@ -152,8 +144,9 @@ body {
     text-align: center;
   }
   .website img {
-    height: 40vh;
-    border-radius: 15px;
+    border: 2px solid var(--blurText);
+    height: 20vw;
+    border-radius: 2vw;
   }
   .website a {
     font-family: Arial, Helvetica, sans-serif;
@@ -162,6 +155,7 @@ body {
   }
   .website h3 {
     padding: 1vw 0vw 2vw 0vw;
+    font-size: 2vw;
   }
   footer {
     text-align: center;
@@ -201,6 +195,7 @@ body {
     right: 0.5vw;
     padding: 1vw;
     border-radius: 10px;
+    font-size: 1vw;
   }
   .toggleButton:hover {
     background-color: var(--navHover);
@@ -208,10 +203,22 @@ body {
   }
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
+    body {
+      padding: 0 5%;
+    }
     .topnav {
-        margin-left: 5vw;
-        width: 90%;
+      margin-top: 2vw;
+      padding: 1vw;
+      width: calc(90% - 2vw);
+    }
+    .topnav a {
+      font-size: 4vw;
+    }
+    .topnav a:hover {
+      background-color: var(--blurBackground);
+      border-radius: 0;
+      color: var(--blurText);
     }
     /*.topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
@@ -232,47 +239,44 @@ body {
     }*/
     .welcome {
         padding-top: 15vw;
+        padding-bottom: 0;
     }
     .welcomeBox {
         width: 90%;
-        height: 100%;
-        margin-left: 5vw;
-
+        padding-bottom: 5vw;
     }
     .welcomeLeft {
-        width: 100%;
+        width: 75%;
         height: 60%;
+        padding: 0 0 0 25%;
     }
     .welcomeLeft img {
-        margin-top: 5vw;
-        margin-left: calc(19vw);
-        height: 50vw;
-        width: 50vw;
+        height: 40vw;
+        width: 40vw;
     }
     .welcomeRightTop {
         width: 100%;
-        height: 7.5vw;
-        margin-top: 0;
+        margin-top: 2vw;
         padding: 0;
         text-align: center;
     }
     .welcomeRightTop h1 {
+        text-align: center;
         margin: 0;
+        font-size: 4vw;
     }
     .welcomeRightBottom {
         width: 100%;
-        margin-top: 0;
+        margin-top: 2vw;
+        padding: 0;
     }
     .welcomeRightBottom p {
         font-size: 2.5vw;
         margin: 0; 
-        margin-left: 7.5vw;
-
     }
     .portfolioBox {
         margin-top: 10%;
-        margin-left: 5vw;
-        width: 90%;
+        width: 100%;
     }
     .portfolioBox > h1 {
         font-size: 6vw;
@@ -293,6 +297,12 @@ body {
       }
       .website {
         margin-bottom: 5vw;
+      }
+      .website img {
+        height: 35vw;
+      }
+      .website h3 {
+        font-size: 3.5vw;
       }
       footer > div > p > a {
         font-size: 5vw;
