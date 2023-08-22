@@ -18,6 +18,7 @@ function myFunction() {
         root_theme.style.setProperty('--blurText', 'rgb( 0, 0, 0 )');
         root_theme.style.setProperty('--navHover', 'rgba( 100, 100, 100, 0.3)');
         document.body.style.backgroundImage = "url('assets/img/lightBg.jpg')";
+        document.getElementById("portfolioWebsite").src = "assets/img/lightPortfolio.png";
         document.getElementById("darkToggle").innerText = "Darkmode";
         darkMode = false;
     }
@@ -28,6 +29,7 @@ function myFunction() {
         root_theme.style.setProperty('--blurText', 'rgb( 220, 220, 220 )');
         root_theme.style.setProperty('--navHover', 'rgb( 200, 200, 200)');
         document.body.style.backgroundImage = "url('assets/img/darkBg.jpg')";
+        document.getElementById("portfolioWebsite").src = "assets/img/darkPortfolio.png";
         document.getElementById("darkToggle").innerText = "Lightmode";
         darkMode = true;
     }
